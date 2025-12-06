@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 
-
-
-export default function Index() {
-  return (function MainComponent({ title, subtitle, description, buttonText, buttonLink }) {
+// Reusable Main Component
+function MainComponent({ title, subtitle, description, buttonText, buttonLink }) {
   return (
     <div className="text-center">
       <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -28,7 +26,8 @@ export default function Index() {
   );
 }
 
-function StoryComponent() {
+// Default export component that uses MainComponent
+export default function UnnamedProject() {
   return (
     <div>
       <MainComponent
@@ -40,5 +39,4 @@ function StoryComponent() {
       />
     </div>
   );
-});
 }
